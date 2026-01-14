@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import { connectDB } from "./../../lib/mongodb";
 import Quote from "./../../models/Quote";
 
-export async function POST(req) {
+export async function POST(req,res) {
   try {
     const data = await req.json();
     const { name, email, phone, company, product, quantity, details, source } = data;
